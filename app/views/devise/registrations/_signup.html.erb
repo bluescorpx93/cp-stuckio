@@ -1,0 +1,13 @@
+<div class='col-md-4 pull-right'>
+	<h2 class='text-center'>Sign In</h2>
+
+	<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "bord-rad-zero"}) do |f| %>
+		<%= f.input :email, required: false, autofocus: true, label: false, placeholder: "Email" %>
+		<%= f.input :password, required: false, label: false, placeholder: "Password" %>
+		<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+		<%= f.button :submit, "Log in", class:"btn btn-block btn-primary" %>
+	<% end %>
+
+	<%= render "devise/shared/links" %>
+	
+</div>

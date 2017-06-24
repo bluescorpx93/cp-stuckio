@@ -1,0 +1,10 @@
+<h1> Hey New Rails Tutorial</h1>
+
+<div class="jumbotron">
+<h2> <i class='fa fa-coffee'> </i>Welcome Landing page</h2>
+<% if current_user %>
+	<%= link_to "Tasks", tasks_path %>
+<% else %>
+	<%= link_to "SignUp", new_user_registration_path %>
+<% end %>
+</div>
